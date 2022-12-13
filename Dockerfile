@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.9-slim
 
 ARG BASIC_AUTH_USERNAME_ARG
 ARG BASIC_AUTH_PASSWORD_ARG
@@ -14,6 +14,7 @@ RUN pip3 install -r requirements.txt
 
 COPY ./src /usr/src
 COPY ./models /usr/models
+
 
 ENTRYPOINT ["python3"]
 
