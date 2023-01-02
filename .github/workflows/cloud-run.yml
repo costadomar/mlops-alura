@@ -26,13 +26,13 @@ env:
   BASIC_AUTH_PASSWORD: ${{ secrets.BASIC_AUTH_PASSWORD }}
 
 jobs:
-  setup-build-deploy:
-    name: Setup, Build, and Deploy
+ deploy:
+    # name: Setup, Build, and Deploy
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
 
     # Alternative option - authentication via credentials json
     
