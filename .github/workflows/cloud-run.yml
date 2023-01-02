@@ -53,7 +53,7 @@ jobs:
         docker build -t gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }} .
         docker push gcr.io/${{ env.PROJECT_ID }}/${{ env.SERVICE }}:${{  github.sha }}
 
-    Build and push image to Google Container Registry
+    #Build and push image to Google Container Registry
     - name: Build
       run: |-
         gcloud builds submit \
