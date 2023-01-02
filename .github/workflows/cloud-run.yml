@@ -36,11 +36,13 @@ jobs:
 
     # Alternative option - authentication via credentials json
     
-    - uses: google-github-actions/setup-gcloud@main
+    -id: 'auth'
+      uses: google-github-actions/auth@main'
       with:
-        version: '290.0.1'
-        service_account_key: ${{ secrets.GCP_CREDENTIALS  }}
-        project_id: ${{ secrets.GCP_PROJECT }}
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+        # version: '290.0.1'
+        # service_account_key: ${{ secrets.GCP_CREDENTIALS  }}
+        # project_id: ${{ secrets.GCP_PROJECT }}
 
 
     # Setup gcloud CLI
