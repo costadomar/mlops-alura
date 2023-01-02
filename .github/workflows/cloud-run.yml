@@ -33,15 +33,13 @@ jobs:
   - name: Checkout
     uses: actions/checkout@main
 
-    # Alternative option - authentication via credentials json
+# Alternative option - authentication via credentials json
     
   - id: 'auth'
     uses: google-github-actions/auth@main'
     with:
       credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
-        # version: '290.0.1'
-        # service_account_key: ${{ secrets.GCP_CREDENTIALS  }}
-        # project_id: ${{ secrets.GCP_PROJECT }}
+
 
 
     # Setup gcloud CLI
