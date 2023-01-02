@@ -26,16 +26,17 @@ env:
   BASIC_AUTH_PASSWORD: ${{ secrets.BASIC_AUTH_PASSWORD }}
 
 jobs:
- deploy:
-  runs-on: ubuntu-latest
+  setup-build-deploy:
+    runs-on: ubuntu-latest
 
-  steps:
-  - name: Checkout
-    uses: actions/checkout@v3
-  - id: 'auth'
-    uses: google-github-actions/auth@main'
-    with:
-      credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - id: 'auth'
+      uses: google-github-actions/auth@main'
+      with:
+        credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
 
 
 
