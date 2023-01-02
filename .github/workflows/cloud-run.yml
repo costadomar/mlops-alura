@@ -33,7 +33,6 @@ jobs:
   - name: Checkout
     uses: actions/checkout@main
 
-# Alternative option - authentication via credentials json
   - id: 'auth'
     uses: google-github-actions/auth@main'
     with:
